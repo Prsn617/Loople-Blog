@@ -18,7 +18,6 @@ const Register = () => {
     const apiUrl = process.env.NEXT_PUBLIC_APIURL;
 
     try {
-      // const res = await fetch(`${apiUrl}/api/auth/register/`, {
       const res = await fetch(`/api/auth/register/`, {
         method: "POST",
         headers: {
@@ -31,7 +30,6 @@ const Register = () => {
         }),
       });
 
-      // res.status === 201 && router.push(`${apiUrl}/profile/login`);
       res.status === 201 && router.push(`/profile/login`);
       res.status === 500 && setIsError(true);
     } catch (err) {

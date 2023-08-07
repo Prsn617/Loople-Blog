@@ -19,7 +19,6 @@ const Profile = () => {
     return <Loader />;
   }
   if (session.status === "unauthenticated") {
-    // router.push(`${apiUrl}/profile/login`);
     router.push(`/profile/login`);
   }
   if (session.status === "authenticated") {

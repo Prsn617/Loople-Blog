@@ -36,8 +36,7 @@ const BlogsComp = ({ posts }) => {
       (filteredPost) => filteredPost.tag === selectedTag
     );
     setFilteredData(newData);
-    console.log(filteredData);
-  }, [selectedTag, setSelectedTag]);
+  }, [selectedTag, setSelectedTag, filteredData, setFilteredData]);
 
   return (
     <div className={styles.blogComp}>
