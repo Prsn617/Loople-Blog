@@ -8,7 +8,7 @@ const apiUrl = process.env.NEXT_PUBLIC_APIURL;
 async function getData(id) {
   // const res = await fetch(`${apiUrl}/api/posts/${id}`, {
   const res = await fetch(`/api/posts/${id}`, {
-    cache: "no-store",
+    cache: "force-cache",
   });
 
   if (!res.ok) {

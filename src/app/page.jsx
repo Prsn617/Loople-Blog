@@ -8,7 +8,7 @@ const apiUrl = process.env.NEXT_PUBLIC_APIURL;
 
 async function getData() {
   const res = await fetch(`${apiUrl}/api/posts`, {
-    cache: "no-store",
+    cache: "force-cache",
   });
 
   if (!res.ok) {
@@ -16,8 +16,6 @@ async function getData() {
   }
   return res.json();
 }
-
-export const runtime = "edge";
 
 const Home = async () => {
   const data = await getData();
