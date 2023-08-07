@@ -1,0 +1,64 @@
+.dialog {
+  height: 150px;
+  position: absolute;
+  z-index: 2;
+  border: 3px solid var(--purple);
+  padding: 2rem 1rem;
+  top: calc(50% - 150px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dialog span {
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.myBlogs {
+  grid-area: myBlog;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.myBlog {
+  display: flex;
+  padding: 10px;
+  box-shadow: 3px 3px 4px 3px var(--purpleT);
+  gap: 10px;
+  position: relative;
+}
+.myBlog img {
+  object-fit: cover;
+}
+
+.myDesc {
+  display: flex;
+  flex-direction: column;
+}
+.myDesc h3,
+.myDesc p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.myDesc h3 {
+  margin-top: 12px;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+.myDesc p {
+  max-width: 36ch;
+  margin-top: 8px;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+.myBlog span {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  color: rgb(197, 22, 22);
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,27 @@
+.formBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.formBox label {
+  font-size: 0.8rem;
+}
+
+.formBox input,
+.formBox textarea,
+.formBox select {
+  min-width: 280px;
+  background-color: transparent;
+  border: 2px solid var(--purple);
+  padding: 0.5em 1em;
+  margin-block: 4px 16px;
+}
+
+.formBox .top {
+  display: flex;
+  gap: 15px;
+}
+
+.title {
+  margin-bottom: 18px;
+}

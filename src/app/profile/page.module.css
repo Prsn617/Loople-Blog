@@ -1,0 +1,38 @@
+.profCont {
+  position: relative;
+  display: grid;
+  grid-template-areas:
+    "user user"
+    "myBlog postForm";
+  min-height: calc(100vh - 160px);
+  gap: 60px;
+}
+
+.loadCont {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  grid-area: user;
+  gap: 8px;
+}
+.user button {
+  max-width: fit-content;
+}
+
+.formCont {
+  flex: 1;
+  padding: 16px 20px;
+  grid-area: postForm;
+}
+
+@media only screen and (max-width: 950px) {
+  .profCont {
+    flex-direction: column-reverse;
+  }
+}

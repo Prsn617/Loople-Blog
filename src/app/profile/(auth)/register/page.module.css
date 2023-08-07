@@ -1,0 +1,30 @@
+.registerCont {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form label {
+  font-size: 0.9rem;
+  color: #333;
+}
+.form input {
+  background-color: transparent;
+  font-size: 1rem;
+  border: 1px solid gray;
+}
+
+.form input,
+.form button {
+  min-width: 250px;
+  padding: 0.5em 1em;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}

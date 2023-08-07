@@ -1,0 +1,73 @@
+.blogComp {
+  display: flex;
+  gap: 48px;
+}
+
+.blogsBox {
+  flex: 11;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  grid-gap: 38px;
+}
+
+.blogBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogBox > :not(:first-child) {
+  padding-inline: 5px;
+}
+
+.blogImg {
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.blogImg img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.blogBox h3 {
+  text-align: center;
+  margin-block: 7px;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  font-size: 0.8rem;
+  padding-block: 5px 6px;
+}
+
+.sideBar {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.tagger {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+.tagger select {
+  background-color: transparent;
+  padding: 0.1rem 0.3rem;
+  border: 2px solid var(--purple);
+}
+
+@media only screen and (max-width: 800px) {
+  .blogsBox {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+}

@@ -1,0 +1,14 @@
+import React from "react";
+import styles from "./Loader.module.css";
+
+const Loader = () => {
+  return (
+    <div className={styles.loadCont}>
+      <div className={styles.ring}>
+        <div className={styles.span}></div>
+      </div>
+    </div>
+  );
+};
+
+export default Loader;

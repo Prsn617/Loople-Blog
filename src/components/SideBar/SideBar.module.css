@@ -1,0 +1,47 @@
+.sideBar {
+  flex: 4;
+  box-shadow: 3px 3px 3px 4px var(--purpleT);
+  text-align: center;
+  max-height: 1200px;
+}
+.sideBar h3 {
+  background-color: var(--purple);
+  padding: 10px 5px;
+  color: #eee;
+}
+
+.recentBlogs {
+  padding: 24px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.recentComp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.recentComp h4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+}
+
+.Img {
+  width: 80%;
+  height: 150px;
+  position: relative;
+}
+.Img img {
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+  .sideBar {
+    display: none;
+  }
+}

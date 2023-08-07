@@ -1,0 +1,12 @@
+.blogContainer {
+  margin-top: 36px;
+}
+
+.loadContainer {
+  display: flex;
+  gap: 48px;
+}
+
+.loader {
+  flex: 11;
+}
