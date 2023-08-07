@@ -17,7 +17,7 @@ async function getData(id) {
 }
 
 export async function generateMetadata({ params }) {
-  const post = await getData(params.id);
+  const post = await getData(params?.id);
   return {
     title: post.pTitle,
     description: post.pDescs,
@@ -25,24 +25,24 @@ export async function generateMetadata({ params }) {
 }
 
 const BlogPost = async ({ params }) => {
-  const data = await getData(params.id);
+  const data = await getData(params?.id);
   return (
     <div className={`${styles.blogPostContainer} container`}>
       <div className={styles.blogPost}>
         <div className={styles.blogImg}>
           <Image
             fill={true}
-            src={data.img}
+            src={data?.img}
             alt={`${data.tag}-image`}
             placeholder="blur"
-            blurDataURL={data.img}
+            blurDataURL={data?.img}
           />
         </div>
         <span>
-          <h1>{data.pTitle}</h1>
-          <p>| By {data.author}</p>
+          <h1>{data?.pTitle}</h1>
+          <p>| By {data?.author}</p>
         </span>
-        <pre>{data.content}</pre>
+        <pre>{data?.content}</pre>
       </div>
       <SideBar />
     </div>

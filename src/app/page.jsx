@@ -35,7 +35,7 @@ const Home = async () => {
       <div className={`${styles.blogSide} container`}>
         <div className={styles.blogsList}>
           {data.slice(0, 5).map((post) => (
-            <HomeBlog key={post._id} blogData={post} />
+            <HomeBlog key={post?._id} blogData={post} />
           ))}
         </div>
         <SideBar />

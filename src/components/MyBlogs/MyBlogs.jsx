@@ -58,7 +58,7 @@ const MyBlogs = () => {
         </h2>
       ) : (
         data?.map((myBlog) => (
-          <div className={styles.myBlog} key={myBlog._id}>
+          <div className={styles.myBlog} key={myBlog?._id}>
             <span
               onClick={() => {
                 dialog.show();
@@ -69,17 +69,17 @@ const MyBlogs = () => {
             </span>
 
             <Image
-              src={myBlog.img}
+              src={myBlog?.img}
               height={150}
               width={180}
               alt="My Blog image"
               placeholder="blur"
-              blurDataURL={myBlog.img}
-              onClick={() => viewBlog(myBlog._id)}
+              blurDataURL={myBlog?.img}
+              onClick={() => viewBlog(myBlog?._id)}
             />
             <div className={styles.myDesc}>
-              <h3>{myBlog.pTitle}</h3>
-              <p>{myBlog.pDescs}</p>
+              <h3>{myBlog?.pTitle}</h3>
+              <p>{myBlog?.pDescs}</p>
             </div>
           </div>
         ))

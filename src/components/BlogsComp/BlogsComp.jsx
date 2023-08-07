@@ -55,10 +55,10 @@ const BlogsComp = ({ posts }) => {
                 <div className={styles.blogImg}>
                   <Image
                     fill={true}
-                    src={post.img}
+                    src={post?.img}
                     alt={`${post.tag}-image`}
                     placeholder="blur"
-                    blurDataURL={post.img}
+                    blurDataURL={post?.img}
                   />
                 </div>
                 <h3>{post.pTitle}</h3>
@@ -68,9 +68,9 @@ const BlogsComp = ({ posts }) => {
                       ? "Last Year"
                       : post?.createdAt?.slice(0, 10)}
                   </span>
-                  <span>{post.tag}</span>
+                  <span>{post?.tag}</span>
                 </div>
-                <p>{post.pDescs}</p>
+                <p>{post?.pDescs}</p>
               </div>
             </Link>
           ))
@@ -85,9 +85,9 @@ const BlogsComp = ({ posts }) => {
               setSelectedTag(e.target.value);
             }}
           >
-            {blogTags.map((blogTag, index) => (
-              <option key={index} value={blogTag.tag}>
-                {blogTag.tag}
+            {blogTags?.map((blogTag, index) => (
+              <option key={index} value={blogTag?.tag}>
+                {blogTag?.tag}
               </option>
             ))}
           </select>
