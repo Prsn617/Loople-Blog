@@ -7,7 +7,8 @@ import HomeBlog from "@/components/HomeBlog/HomeBlog";
 const apiUrl = process.env.NEXT_PUBLIC_APIURL;
 
 async function getData() {
-  const res = await fetch(`${apiUrl}/api/posts`, {
+  // const res = await fetch(`${apiUrl}/api/posts`, {
+  const res = await fetch(`/api/posts`, {
     cache: "no-store",
   });
 
@@ -16,6 +17,8 @@ async function getData() {
   }
   return res.json();
 }
+
+export const runtime = "edge";
 
 const Home = async () => {
   const data = await getData();

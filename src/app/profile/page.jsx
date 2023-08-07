@@ -13,11 +13,14 @@ const Profile = () => {
   const session = useSession();
   const router = useRouter();
 
+  const apiUrl = process.env.NEXT_PUBLIC_APIURL;
+
   if (session.status === "loading") {
     return <Loader />;
   }
   if (session.status === "unauthenticated") {
-    router.push("/profile/login");
+    // router.push(`${apiUrl}/profile/login`);
+    router.push(`/profile/login`);
   }
   if (session.status === "authenticated") {
     return (
