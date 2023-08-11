@@ -5,6 +5,7 @@ import styles from "./PostForm.module.css";
 import { useSession } from "next-auth/react";
 import useSWR from "swr";
 
+export const runtime = "edge";
 const PostForm = () => {
   const apiUrl = process.env.NEXT_PUBLIC_APIURL;
   const session = useSession();

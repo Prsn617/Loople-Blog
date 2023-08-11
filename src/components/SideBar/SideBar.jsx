@@ -3,6 +3,7 @@ import styles from "./SideBar.module.css";
 import Image from "next/image";
 
 const apiUrl = process.env.NEXT_PUBLIC_APIURL;
+export const runtime = "edge";
 
 async function getData() {
   const res = await fetch(`${apiUrl}/api/posts`, {

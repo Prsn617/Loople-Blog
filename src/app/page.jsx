@@ -5,6 +5,7 @@ import SideBar from "@/components/SideBar/SideBar";
 import HomeBlog from "@/components/HomeBlog/HomeBlog";
 
 const apiUrl = process.env.NEXT_PUBLIC_APIURL;
+export const runtime = "edge";
 
 async function getData() {
   const res = await fetch(`${apiUrl}/api/posts`, {
